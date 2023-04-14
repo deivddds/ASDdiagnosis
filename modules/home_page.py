@@ -8,7 +8,7 @@ from constants.config import get_text, LANGUAGES
 def display_home_page(session_state):
     language = session_state.language
 
-    st.title(get_text("MENU_ITEMS", language)["display_home_page"])
+    st.subheader(get_text("MENU_ITEMS", language)["display_home_page"])
     st.markdown(get_text("HOME_DESCRIPTION", language))
 
     st.markdown(get_text("USAGE_INSTRUCTIONS", language).strip())

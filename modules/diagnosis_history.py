@@ -7,7 +7,7 @@ from constants.config import get_text, LANGUAGES
 
 def display_diagnosis_history(session_state):
     language = session_state.language
-    st.title(get_text("MENU_ITEMS", language)["display_diagnosis_history"])
+    st.subheader(get_text("MENU_ITEMS", language)["display_diagnosis_history"])
 
 if __name__ == "__main__":
     display_diagnosis_history(session_state)

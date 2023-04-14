@@ -7,7 +7,7 @@ from constants.config import get_text, LANGUAGES
 
 def display_resources_tools(session_state):
     language = session_state.language
-    st.title(get_text("MENU_ITEMS", language)["display_resources_tools"])
+    st.subheader(get_text("MENU_ITEMS", language)["display_resources_tools"])
 
 if __name__ == "__main__":
     display_resources_tools(session_state)

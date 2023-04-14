@@ -5,32 +5,32 @@ from models.database import SessionLocal, Base
 from modules import home_page, data_management, new_diagnosis, diagnosis_history, resources_tools, settings
 from constants.config import get_text, LANGUAGES
 
-# Funciones de Streamlit y el resto de la aplicación
 st.set_page_config(
     page_title='Evaluación TEA',
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# app.py
 @st.cache_resource
 class SessionState:
     def __init__(self):
         self.language = "es"
+        self.theme = "Light" 
         self.logged_in = False
         self.selected_menu_item = home_page.display_home_page
+        self.config = st.config
+        settings.apply_theme(self.theme)
+        settings.apply_language(self.language) 
 
 def main():
     session_state = SessionState()
 
-    if not session_state.logged_in:
-        # Crear un espacio vacío en la parte superior de la página
+    if not session_state.logged_in:   
         st.empty()
 
-        # Centrar el título y el subheader
         _, title_col, _ = st.columns([1, 1.5, 1])
         with title_col:
-            st.title("Plataforma para Diagnostico de TEA")
+            st.title("ADSdiagnosis")
             st.subheader("Iniciar sesión")
             db = SessionLocal()
             session_state.logged_in = authenticate(db)
@@ -57,12 +57,14 @@ def main():
         if session_state.selected_menu_item is None:
             session_state.selected_menu_item = menu_items[0]
 
+        st.sidebar.title(get_text("HOME_TITLE", session_state.language))
+    
         choice = st.sidebar.selectbox(
-            get_text("HOME_TITLE", session_state.language),
+            get_text("HOME_MENU", session_state.language),
             [get_text("MENU_ITEMS", session_state.language)[func.__name__] for func in menu_items]
         )
 
-        # Encuentra el índice del elemento seleccionado y actualiza el estado de la sesión
+        # Encuentra el índice del elemento seleccionado 
         choice_index = [get_text("MENU_ITEMS", session_state.language)[func.__name__] for func in menu_items].index(choice)
         session_state.selected_menu_item = menu_items[choice_index]
 

@@ -12,10 +12,17 @@ LANGUAGES = {
     ],
 }
 
-
 TEXTS = {
     "es": {
-        "HOME_TITLE": "Seleccione una opción",
+        "PAGE_TITLES": {"display_settings": "Configuración",},
+        "SETTINGS_SECTIONS": {"language": "Idioma","theme": "Tema",},
+        "SETTINGS_PROMPTS": {
+            "select_language": "Selecciona el idioma",
+            "select_theme": "Selecciona el tema",
+        },
+        "SETTINGS_ACTIONS": {"apply_changes": "Aplicar cambios",},
+        "HOME_TITLE": "ADSdiagnosis",
+        "HOME_MENU": "Seleccione una opción",
         "HOME_DESCRIPTION": "Herramienta para profesionales en el diagnóstico y seguimiento del Trastorno del Espectro Autista (TEA) en niños.",
         "MENU_ITEMS": {
             "display_home_page": "Página de inicio",
@@ -41,7 +48,22 @@ Navegue por el menú de la izquierda para acceder a las diferentes secciones y f
         },
     },
     "en": {
-        "HOME_TITLE": "Select page",
+    "PAGE_TITLES": {
+            "display_settings": "Settings",
+        },
+        "SETTINGS_SECTIONS": {
+            "language": "Language",
+            "theme": "Theme",
+        },
+        "SETTINGS_PROMPTS": {
+            "select_language": "Select language",
+            "select_theme": "Select theme",
+        },
+        "SETTINGS_ACTIONS": {
+            "apply_changes": "Apply changes",
+        },
+        "HOME_TITLE": "ADSdiagnosis",
+        "HOME_MENU": "Select page",
         "HOME_DESCRIPTION": "Tool for professionals in the diagnosis and monitoring of Autism Spectrum Disorder (ASD) in children.",
         "MENU_ITEMS": {
             "display_home_page": "Home",
