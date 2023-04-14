@@ -46,9 +46,21 @@ Navegue por el menú de la izquierda para acceder a las diferentes secciones y f
             "profiles": "Perfiles en redes sociales o sitios web: [Enlaces a perfiles o sitios web]",
             "license": "Licencia: [Información de la licencia y créditos]",
         },
+        "DATA_MANAGEMENT_VARIABLES": {
+            "child_name": "Nombre del niño",
+            "child_surname": "Apellidos del niño",
+            "date_of_birth": "Fecha de nacimiento",
+            "gender": "Género",
+            "family_history": "Antecedentes familiares",
+            "previous_diagnosis": "Diagnóstico previo",
+            "observations": "Observaciones",
+            "color": "Color",
+            "child_data_updated_success": "Datos del niño actualizados con éxito",
+            "update_child_data": "Actualizar información"
+        },
     },
     "en": {
-    "PAGE_TITLES": {
+        "PAGE_TITLES": {
             "display_settings": "Settings",
         },
         "SETTINGS_SECTIONS": {
@@ -73,8 +85,7 @@ Navegue por el menú de la izquierda para acceder a las diferentes secciones y f
             "display_resources_tools": "Resources & Tools",
             "display_settings": "Settings",
         },
-        "SIDEBAR_LINKS": {
-            "research": "ASD Research",
+        "SIDEBAR_LINKS": {            "research": "ASD Research",
             "communities": "Communities & Organizations",
             "tools_apps": "Tools & Apps",
         },
@@ -87,8 +98,22 @@ Navigate the menu on the left to access the different sections and features of t
             "profiles": "Profiles on social networks or websites: [Links to profiles or websites]",
             "license": "License: [License information and credits]",
         },
+        "DATA_MANAGEMENT_VARIABLES": {
+            "child_name": "Child's Name",
+            "child_surname": "Child's Surname",
+            "date_of_birth": "Date of Birth",
+            "gender": "Gender",
+            "family_history": "Family History",
+            "previous_diagnosis": "Previous Diagnosis",
+            "observations": "Observations",
+            "color": "Color",
+            "child_data_updated_success": "Child Data Updated Success",
+            "update_child_data": "Update Child Data"
+        },
     },
 }
+
+
 
 def get_text(key, language):  
     return TEXTS[language][key]

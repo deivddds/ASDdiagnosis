@@ -19,7 +19,9 @@ class SessionState:
         self.logged_in = False
         self.selected_menu_item = home_page.display_home_page
         self.config = st.config
-        settings.apply_theme(self.theme)
+        self.professional_dni = None
+        self.expander_states = {}
+        # settings.apply_theme(self.theme)
         settings.apply_language(self.language) 
 
 def main():
@@ -33,7 +35,7 @@ def main():
             st.title("ADSdiagnosis")
             st.subheader("Iniciar sesión")
             db = SessionLocal()
-            session_state.logged_in = authenticate(db)
+            session_state.logged_in = authenticate(db, session_state)
 
         if session_state.logged_in:
             st.experimental_rerun()
