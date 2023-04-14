@@ -70,11 +70,6 @@ def main():
         choice_index = [get_text("MENU_ITEMS", session_state.language)[func.__name__] for func in menu_items].index(choice)
         session_state.selected_menu_item = menu_items[choice_index]
 
-        st.sidebar.markdown("## " + get_text("SIDEBAR_LINKS", session_state.language)["research"])
-        st.sidebar.button(get_text("SIDEBAR_LINKS", session_state.language)["research"], on_click=None, args=None, kwargs=None, key=None, help=None)
-        st.sidebar.button(get_text("SIDEBAR_LINKS", session_state.language)["communities"], on_click=None, args=None, kwargs=None, key=None, help=None)
-        st.sidebar.button(get_text("SIDEBAR_LINKS", session_state.language)["tools_apps"], on_click=None, args=None, kwargs=None, key=None, help=None)
-
         session_state.selected_menu_item(session_state)
 
 if __name__ == "__main__":

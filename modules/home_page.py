@@ -8,6 +8,14 @@ from constants.config import get_text, LANGUAGES
 def display_home_page(session_state):
     language = session_state.language
 
+    st.sidebar.markdown("___") 
+    st.sidebar.title(get_text("MENU_ITEMS", language)["display_home_page"])
+
+    st.sidebar.markdown("## " + get_text("SIDEBAR_LINKS", session_state.language)["research"])
+    st.sidebar.button(get_text("SIDEBAR_LINKS", session_state.language)["research"], on_click=None, args=None, kwargs=None, key=None, help=None)
+    st.sidebar.button(get_text("SIDEBAR_LINKS", session_state.language)["communities"], on_click=None, args=None, kwargs=None, key=None, help=None)
+    st.sidebar.button(get_text("SIDEBAR_LINKS", session_state.language)["tools_apps"], on_click=None, args=None, kwargs=None, key=None, help=None)
+
     st.subheader(get_text("MENU_ITEMS", language)["display_home_page"])
     st.markdown(get_text("HOME_DESCRIPTION", language))
 

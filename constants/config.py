@@ -47,8 +47,8 @@ Navegue por el menú de la izquierda para acceder a las diferentes secciones y f
             "license": "Licencia: [Información de la licencia y créditos]",
         },
         "DATA_MANAGEMENT_VARIABLES": {
-            "child_name": "Nombre del niño",
-            "child_surname": "Apellidos del niño",
+            "child_name": "Nombre",
+            "child_surname": "Apellidos",
             "date_of_birth": "Fecha de nacimiento",
             "gender": "Género",
             "family_history": "Antecedentes familiares",
@@ -56,7 +56,12 @@ Navegue por el menú de la izquierda para acceder a las diferentes secciones y f
             "observations": "Observaciones",
             "color": "Color",
             "child_data_updated_success": "Datos del niño actualizados con éxito",
-            "update_child_data": "Actualizar información"
+            "update_child_data": "Actualizar información",
+            "child_data_added_success": "Nuevo niño añadido con éxito",
+            "child_data_add_error": "Error al añadir niño: {}",
+            "child_data_update_error": "Error al actualizar los datos del niño: {}",
+            "add_new_child": "Añadir nuevo niño",
+            "child_form_expander": "Formulario de niño"
         },
     },
     "en": {
@@ -99,8 +104,8 @@ Navigate the menu on the left to access the different sections and features of t
             "license": "License: [License information and credits]",
         },
         "DATA_MANAGEMENT_VARIABLES": {
-            "child_name": "Child's Name",
-            "child_surname": "Child's Surname",
+            "child_name": "Name",
+            "child_surname": "Surname",
             "date_of_birth": "Date of Birth",
             "gender": "Gender",
             "family_history": "Family History",
@@ -108,7 +113,12 @@ Navigate the menu on the left to access the different sections and features of t
             "observations": "Observations",
             "color": "Color",
             "child_data_updated_success": "Child Data Updated Success",
-            "update_child_data": "Update Child Data"
+            "update_child_data": "Update Child Data",
+            "child_data_added_success": "New Child Added Successfully",
+            "child_data_add_error": "Error Adding Child: {}",
+            "child_data_update_error": "Error Updating Child Data: {}",
+            "add_new_child": "Add New Child",
+            "child_form_expander": "Add New Child Form",
         },
     },
 }
