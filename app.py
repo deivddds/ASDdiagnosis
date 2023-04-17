@@ -21,6 +21,11 @@ class SessionState:
         self.config = st.config
         self.professional_dni = None
         self.expander_states = {}
+        self.form_messages = {}
+        self.operation_result = ""
+        self.submit_attempt = 0
+        self.first_time = True
+        
         # settings.apply_theme(self.theme)
         settings.apply_language(self.language) 
 

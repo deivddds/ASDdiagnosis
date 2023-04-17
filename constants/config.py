@@ -61,7 +61,11 @@ Navegue por el menú de la izquierda para acceder a las diferentes secciones y f
             "child_data_add_error": "Error al añadir niño: {}",
             "child_data_update_error": "Error al actualizar los datos del niño: {}",
             "add_new_child": "Añadir nuevo niño",
-            "child_form_expander": "Formulario de niño"
+            "child_form_expander": "Formulario de niño",
+            "child_data_deleted_success": "Datos del niño eliminados correctamente.",
+            "child_data_delete_error": "Error al eliminar los datos del niño: {}",
+            "delete_child": "Eliminar",
+            "child_data_create_error": "No ha sido posible crear el registro"
         },
     },
     "en": {
@@ -119,6 +123,10 @@ Navigate the menu on the left to access the different sections and features of t
             "child_data_update_error": "Error Updating Child Data: {}",
             "add_new_child": "Add New Child",
             "child_form_expander": "Add New Child Form",
+            "child_data_deleted_success": "Child Data Deleted Successfully",
+            "child_data_delete_error": "Error deleting child data: {}",
+            "delete_child": "Delete child",
+            "child_data_create_error": "Error creating child data: {}",
         },
     },
 }
