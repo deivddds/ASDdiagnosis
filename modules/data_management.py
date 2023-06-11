@@ -134,7 +134,10 @@ def child_form_update(db, child, session_state):
         submit_button = st.form_submit_button("Actualizar niño")
 
         if submit_button:
-            if is_form_valid(nombre, apellidos, fecha_nacimiento, genero):
+            errors = is_form_valid(nombre, apellidos, fecha_nacimiento, genero)
+            print(errors)
+            if not errors:
+                st.success(get_text("DATA_MANAGEMENT_VARIABLES", session_state.language)["child_data_updated_success"])
                 child.nombre = nombre
                 child.apellidos = apellidos
                 child.fecha_nacimiento = fecha_nacimiento
@@ -146,13 +149,13 @@ def child_form_update(db, child, session_state):
 
                 try:
                     db.commit()
-                    st.success(get_text("DATA_MANAGEMENT_VARIABLES", session_state.language)["child_data_updated_success"])
                     st.experimental_rerun()
                 except Exception as e:
                     db.rollback()
                     st.error(get_text("DATA_MANAGEMENT_VARIABLES", session_state.language)["child_data_update_error"].format(e))
             else:
-                st.error("Por favor, complete todos los campos obligatorios.")
+                for error in errors:
+                    st.error(error)
 
 
 def render_dashboard(session_state):
@@ -171,15 +174,12 @@ def render_dashboard(session_state):
         child_form_create(db, session_state)
 
     for child in children:
-        col1, col2, col3 = st.columns([3, 1, 1])
+        col1, col2 = st.columns([3, 1])
         with col1:
             with st.expander(f"{child.nombre} {child.apellidos}"):
                 child_form_update(db, child, session_state)
         with col2:
-            with st.expander("", expanded=False):
-                st.write("Diagnóstico del niño")
-        with col3:
-            if st.button(get_text("DATA_MANAGEMENT_VARIABLES", session_state.language)["delete_child"], key=f"delete_child_{child.id_niño}"):
+            if st.button(get_text("DATA_MANAGEMENT_VARIABLES", session_state.language)["delete_child"], key=f"delete_child_{child.id_niño}", type='primary'):
                 delete_child(db, child.id_niño, session_state)
 
 def display_data_management(session_state):
